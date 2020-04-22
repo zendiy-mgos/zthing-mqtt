@@ -11,10 +11,6 @@ filesystem:
   - fs
 config_schema:
   - ["zthing.mqtt", "o", {title: "ZenThing MQTT settings"}]
-  - ["zthing.mqtt.auto_register", "b", true, {title: ""}]
-  - ["zthing.mqtt.state_topic", "s", "$ha/zthings/${device_id}/SW${zthing_id}/state", {title: ""}]
-  - ["zthing.mqtt.cmd_topic", "s", "$ha/zthings/${device_id}/SW${zthing_id}/cmd", {title: ""}]
-  - ["zthing.mqtt.getstate_topic", "s", "$ha/zthings/${device_id}/SW${zthing_id}/state/get", {title: ""}]
   - ["zthing.mqtt.birth_message", "s", "online", {title: "Default MQTT birth message"}]
   - ["zthing.mqtt.qos", i, 1, {title: "Default MQTT QOS value for publishing messages"}]
 
