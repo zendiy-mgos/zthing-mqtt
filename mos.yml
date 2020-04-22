@@ -1,6 +1,6 @@
 author: ZenDIY
 type: lib
-description: ZenThing MQTT
+description: Mongoose OS library for enabling MQTT in Zen Things ecosystem
 version: 1.0
 
 sources:
