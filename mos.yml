@@ -11,8 +11,8 @@ filesystem:
   - fs
 config_schema:
   - ["zthing.mqtt", "o", {title: "ZenThing MQTT settings"}]
-  - ["zthing.mqtt.birth_message", "s", "online", {title: "Default MQTT birth message"}]
-  - ["zthing.mqtt.qos", i, 1, {title: "Default MQTT QOS value for publishing messages"}]
+  - ["zthing.mqtt.birth_message", "s", "", {title: "Default MQTT birth message"}]
+  - ["zthing.mqtt.qos", i, 0, {title: "Default MQTT QOS value for publishing messages"}]
 
 libs:
   - origin: https://github.com/zendiy-mgos/zthing
