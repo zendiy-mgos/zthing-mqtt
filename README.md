@@ -1,3 +1,3 @@
 # ZenThing MQTT
 ## Overview
-A Mongoose OS library for enabling MQTT in Zen Things ecosystem.
+A Mongoose OS library for enabling MQTT in ZenThings ecosystem.
