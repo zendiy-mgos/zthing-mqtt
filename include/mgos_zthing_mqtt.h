@@ -18,12 +18,15 @@
 #ifndef MGOS_ZTHING_MQTT_H_
 #define MGOS_ZTHING_MQTT_H_
 
+#include<stdarg.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 int mgos_zthing_mqtt_pub(const char *topic, const char *msg, bool retain);
+int mgos_zthing_mqtt_pubf(const char *topic, bool retain, const char *json_fmt, ...);
+int mgos_zthing_mqtt_pubv(const char *topic, bool retain, const char *json_fmt, va_list ap);
 
 #ifdef __cplusplus
 }
