@@ -36,6 +36,18 @@ int mgos_zthing_mqtt_pub(const char *topic, const char *msg, bool retain) {
       mgos_sys_config_get_zthing_mqtt_qos(), retain);
 }
 
+int mgos_zthing_mqtt_pubf(const char *topic, bool retain, const char *json_fmt, ...) {
+  va_list ap;
+  va_start(ap, json_fmt);
+  int r = mgos_zthing_mqtt_pubv(topic, retain, json_fmt, ap);
+  va_end(ap);
+  return r;
+}
+
+int mgos_zthing_mqtt_pubv(const char *topic, bool retain, const char *json_fmt, va_list ap) {
+  return mgos_mqtt_pubv(topic, mgos_sys_config_get_zthing_mqtt_qos(), retain, json_fmt, ap);
+}
+
 bool mgos_zthing_mqtt_init() {
 
   // replace $device_id placehoder/s in will_topic 
