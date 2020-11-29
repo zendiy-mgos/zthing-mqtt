@@ -24,6 +24,7 @@ static void mg_zthing_mqtt_on_event(struct mg_connection *nc,
   if (ev == MG_EV_MQTT_CONNACK) {
     // Publish the 'birth' message 
     mg_zthing_mqtt_birth_message_pub();
+    mgos_event_trigger(MGOS_EV_ZTHING_UPDATE_STATE, NULL);
   } else if (ev == MG_EV_MQTT_DISCONNECT) {
   }
   (void) ev_data;
